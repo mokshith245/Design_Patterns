@@ -11,9 +11,17 @@ public class DesignPatternsApplication
     {
         SpringApplication.run(DesignPatternsApplication.class, args);
 
-        Phone p= new phone_builder().setOs("Android").setRam(10).getPhone();
+        Os_Builder phone=new Os_Builder();
+        Os obj=phone.getInstance("cheap");
 
-        System.out.println(p);
+        obj.spec();
+        obj=phone.getInstance("costly");
+        obj.spec();
+        obj=phone.getInstance("windows");
+        obj.spec();
+
+
+
 
 
 
